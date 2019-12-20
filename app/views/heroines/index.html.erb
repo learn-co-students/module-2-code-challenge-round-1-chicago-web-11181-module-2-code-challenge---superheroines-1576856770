@@ -1,4 +1,10 @@
 <h2>All Heroines</h2>
+<br>
+<h3>Search by Powah!</h3>
+<%= form_tag(powers_path method: :get) do %>
+  Power <%= text_field_tag :power %>
+  <%= submit_tag 'Search' %>
+<% end %>
 
 <ul>
   <% @heroines.each do |heroine| %>

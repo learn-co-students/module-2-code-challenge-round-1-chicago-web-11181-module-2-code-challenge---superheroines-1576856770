@@ -1,6 +1,9 @@
 class HeroinesController < ApplicationController
   def index
     @heroines = Heroine.all
+
+    
+
   end
 
   def show
@@ -26,6 +29,13 @@ class HeroinesController < ApplicationController
   def hero_params
     params.require(:heroine).permit(:name, :super_name, :power_id)
   end
+
+  def powers_params
+    params.require(:power).permit(:heroine, :name)
+  end
+
+  # def coupon_params
+  #   params.require(:coupon).permit(:store, :coupon_code)
+  # end
 end
 
-# "name"=>"Mrs. F", "super_name"=>"Missus Frankee", "power_id"=>"3"
