@@ -1,10 +1,25 @@
 <h2>All Heroines</h2>
 
+<!--
+<%= form_with(url: "/search_by_superpower", method: "get") do %>
+  <%= label_tag(:q, "Search by Superpower:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+lines 4-8 got commented out, ran out of time
+was able to create a form field with a search button
+was trying to figure out how to redirect to search_by_superpower_path
+
+-->
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine_path(heroine) %>
     </li>
     <br>
   <% end %>
 </ul>
+
+<p><%= link_to "Create a new heroine!", new_heroine_path %></p>
