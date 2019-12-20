@@ -35,4 +35,8 @@ class HeroinesController < ApplicationController
       @powers = Power.all
     end
 
+    # TODO: Implement this to make the search work on the index page
+    def search
+    end
+
 end
