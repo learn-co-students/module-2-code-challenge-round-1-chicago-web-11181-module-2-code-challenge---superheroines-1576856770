@@ -1,0 +1,3 @@
+<h1>Name: <%= @heroine.name %></h1>
+<p>Super name: <%= @heroine.super_name %></p>
+<p>Power: <%= link_to(@heroine.power.name, "/powers/#{@heroine.power.id}") %></p>
