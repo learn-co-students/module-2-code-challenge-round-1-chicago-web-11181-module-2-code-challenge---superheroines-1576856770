@@ -1,0 +1,9 @@
+<h1>Create a Hero!</h1>
+
+
+<%= form_with model: @heroine  do |f| %>
+    <%= f.label :super_name %>
+    <%= f.text_field :super_name %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  <% end %>
