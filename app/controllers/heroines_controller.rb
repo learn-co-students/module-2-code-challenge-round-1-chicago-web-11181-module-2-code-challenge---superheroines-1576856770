@@ -3,6 +3,14 @@ class HeroinesController < ApplicationController
     @heroines = Heroine.all
   end
 
+  # def index_search_by_superpower
+  #   @heroines = Heroine.all
+  #   binding.pry
+  # end
+  # lines 6-10 commented out, ran out of time
+  # this was the controller action to route to my index page
+  # for a specific superpower (see index_search_by_superpower view)
+
   def show
     @heroine = Heroine.find_by(id: params[:id])
   end
