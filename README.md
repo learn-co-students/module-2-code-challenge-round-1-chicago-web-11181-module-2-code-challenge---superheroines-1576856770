@@ -61,3 +61,5 @@ Read through the instructions to get a sense of the scope of this code challenge
 + More than one heroine can have the same power.
 + We want to be RESTful. What URL should show info about a particular heroine? What URL should show a form to create a heroine? What controller actions are associated?
 + If you're having a hard time implementing the filter, take a look at this http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form. We are asking an input field to search for powers.
+
+
