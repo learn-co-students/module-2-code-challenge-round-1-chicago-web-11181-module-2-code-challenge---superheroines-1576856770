@@ -24,7 +24,27 @@ class HeroinesController < ApplicationController
     end
   end
 
-  def power_filter
+  def flight
+    p = Power.all.find_by(name: 'flight')
+    @heroines = Heroine.all.select { |h| h.power == p }
+    render :index
+  end
 
+  def strong
+    p = Power.all.find_by(name: 'super strength' )
+    @heroines = Heroine.all.select { |h| h.power == p }
+    render :index
+  end
+
+  def supersense
+    p = Power.all.find_by(name: 'super human senses')
+    @heroines = Heroine.select { |h| h.power == p }
+    render :index
+  end
+
+  def elastic
+    p = Power.all.find_by(name: 'elasticity')
+    @heroines = Heroine.select { |h| h.power == p }
+    render :index
   end
 end
