@@ -19,7 +19,7 @@ class HeroinesController < ApplicationController
       heroine.save
       redirect_to heroine
     else
-      render :new
+      render :new #Need to fix error
     end
   end
 
