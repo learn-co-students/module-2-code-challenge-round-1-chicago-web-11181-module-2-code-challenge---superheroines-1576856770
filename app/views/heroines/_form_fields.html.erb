@@ -1,0 +1,9 @@
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+
+<%= f.label :super_name %>
+<%= f.text_field :super_name %><br>
+
+<%= f.label :power %>
+<%= f.collection_select(:power_id, @powers, :id, :name, :selected => 0) %><br>
+
