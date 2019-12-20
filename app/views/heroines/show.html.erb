@@ -1,0 +1,7 @@
+<h1>Holy crud, batman! It's <%= @heroine.super_name %>!</h1>
+
+<p>Shh, <%= @heroine.super_name %>'s real name is <%= @heroine.name %>!</p>
+
+<h3>And she's most famous for her <%= link_to @heroine.power.name, @heroine.power %>!</h3>
+
+<%= link_to "Take me back to the Heroine Superlist!", heroines_path %>

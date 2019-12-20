@@ -1,0 +1,13 @@
+<h1>So, what does <%= @power.name %> do? </h1>
+<p>  It <%= @power.description %></p>
+
+<%= link_to "Back to the SuperPowers list", powers_path %>
+
+<h3>List of Heroines who have this power:</h3>
+<ul>
+  <% @power.heroines.each do |heroine| %>
+    <li>
+      <%= link_to heroine.super_name, heroine %>
+    </li>
+  <% end %>
+</ul>

@@ -1,10 +1,15 @@
-<h2>All Heroines</h2>
+<h1>All Heroines</h1>
 
-<ul>
+<p>Filter by Super Power?:</p>
+<p><%= link_to "Super Strength", heroines_strong_path %>, <%= link_to "Flight", heroines_flight_path %>, <%= link_to "Super Human Senses", heroines_supersense_path %>, <%= link_to "Elasticity", heroines_elastic_path %>, <%= link_to "no filter", heroines_path %></p>
+
+<h3><ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine %>
     </li>
     <br>
   <% end %>
-</ul>
+</ul></h3>
+
+<%= link_to "Wanna create your own super heroine? Click here to get started!", new_heroine_path %>
